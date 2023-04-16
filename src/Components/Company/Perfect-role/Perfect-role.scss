@@ -1,0 +1,198 @@
+@import '../../../var.scss';
+
+.perfect-role {
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+
+    &__container {
+
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+
+        @media screen and (max-width: $tabel) {
+            flex-direction: column;
+        }
+    }
+
+    &__block-title {
+        padding-left: 64px;
+
+        @media screen and (max-width: $tabel) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-left: 0;
+            margin-bottom: 44px;
+        }
+    }
+
+    &__title {
+        position: relative;
+        margin: 0;
+        margin-bottom: 32px;
+        font-size: 54px;
+        font-weight: 700;
+        line-height: 68px;
+        font-family: "Gilroy", sans-serif;
+
+        @media screen and (max-width: $mack) {            
+            font-size: 48px;
+        }
+
+        @media screen and (max-width: $minMack) {
+            font-size: 44px;
+            line-height: 51px;
+            order: -1;
+        }
+
+        @media screen and (max-width: $tabel) {
+            max-width: 537px;
+            text-align: center;
+            margin-bottom: 33px;
+            margin-left: 0;
+        }
+
+        @media screen and (max-width: $phone) {
+            max-width: 340px;
+            font-size: 32px;
+            line-height: 40px;
+        }
+
+        & .stars-1 {
+            display: inline-block;
+            height: 1px;
+            width: 1px;
+            position: relative;
+
+            &::before {
+                content: url('../../../imgs/svg/your-business-stars-1.svg');
+                display: block;
+                position: absolute;
+                top: -90px;
+                left: -40px;
+
+                @media screen and (max-width: $phone) {
+                    top: -80px;
+                }
+            }
+        }
+
+    }
+
+    &__btn {
+        display: inline-block;
+        width: 210px;
+        text-align: center;
+        text-decoration: none;
+        border: 1px solid rgba(210, 210, 210, 1);
+    }
+
+    & .perfect-role-gallery {
+        display: grid;
+        grid-gap: 22px;
+        grid-template-columns: 374px 374px;
+        grid-template-rows: 300px 60px 300px;
+        grid-template-areas: 
+            "userOne userTwo"
+            "userThree userTwo"
+            "userThree userFour"
+        ;
+
+        @media screen and (max-width: $mack) {
+            
+        }
+
+        @media screen and (max-width: $minMack) {
+            grid-template-rows: 320px 44px 320px;
+            grid-template-columns: 330px 330px;
+        }
+
+        @media screen and (max-width: $tabel) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 300px 74px 300px;
+            grid-gap: 16px;
+            order: 1;
+        }
+
+        @media screen and (max-width: $phone) {
+            width: 100%;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, 400px);
+            grid-gap: 13px;
+            grid-template-areas: 
+            "userOne"
+            "userTwo"
+            "userThree"
+            "userFour"
+        ;
+        }
+
+        @media screen and (max-width: 399.98px) {
+            grid-template-rows: repeat(4, 260px);
+        }
+
+        &__item {
+            border-radius: 32px;
+            overflow: hidden;
+
+            @media screen and (max-width: $phone) {
+                border-radius: 22px;
+            }
+
+            &.item-1 {
+                grid-area: userOne;
+            }
+
+            &.item-2 {
+                grid-area: userTwo;
+            }
+
+            &.item-3 {
+                grid-area: userThree;
+            }
+
+            &.item-4 {
+                grid-area: userFour;
+            }
+
+            & img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    & .decor {
+
+
+        &.one {
+            position: absolute;
+            left: -348px;
+            top: -317px;
+            width: 724.91px;
+            height: 724.91px;
+            background: radial-gradient(95.51% 95.51% at 50% 50%, #DADADA 0%, #FAFAFA 100%);
+            opacity: 0.15;
+            border-radius: 43.7931px;
+            transform: rotate(-45deg);
+        } 
+
+        &.two {
+            position: absolute;
+            top: 100px;
+            right: 29px;
+
+            @media screen and (max-width: $phone) {
+                top: 0;
+                right: -180px;
+            }
+        }
+    }
+}

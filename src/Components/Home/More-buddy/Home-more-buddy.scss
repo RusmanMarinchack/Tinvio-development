@@ -1,0 +1,330 @@
+@import '../../../var.scss';
+
+.more-buddy {
+    margin-top: 300px;
+    margin-bottom: 150px;
+    position: relative;
+
+    @media screen and (max-width: $tabel) {
+        margin-top: 100px;
+    }
+
+    &__container {
+
+    }
+
+    &__wrapper {
+        display: flex;
+        position: relative;
+        z-index: 1;
+
+        @media screen and (max-width: $tabel) {
+            flex-direction: column;
+        }
+    }
+
+    & .block-text {
+        width: 50%;
+
+        @media screen and (max-width: $tabel) {
+            width: 100%;
+        }
+
+        &__inner {
+            max-width: 525px;
+
+            @media screen and (max-width: $tabel) {
+                max-width: 390px;
+                margin: 0 auto;
+                text-align: center;
+                max-width: 460px;
+            }
+        }
+
+        &__title {
+            font-size: 36px;
+            margin-bottom: 24px;
+
+            @media screen and (max-width: $tabel) {
+                font-size: 32px;
+            }
+
+            @media screen and (max-width: $phone) {
+                font-size: 28px;
+            }
+
+            & span.red {
+                width: 0ch;
+                display: inline-grid;
+                // height: 37px;
+                overflow: hidden;
+                position: relative;
+                white-space: nowrap;
+                // transition: width 0.3s;
+
+                @media screen and (max-width: $tabel) {
+                    // height: 31px;
+                }
+
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    width: 2px;
+                    height: 100%;
+                    margin-left: 3px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    background: #000;
+                    animation: print-focus infinite ease 0.7s;
+                }
+            }
+        }
+
+        & .tabs {
+            margin-bottom: 32px;
+
+            &__header {
+                display: flex;
+                align-items: center;
+                margin-bottom: 24px;
+
+                @media screen and (max-width: $tabel) {
+                    justify-content: center;
+                }
+            }
+
+            &__btn {
+                background: rgba(243, 244, 245, 1);
+                border-radius: 8px;
+                border: 1px solid transparent;
+                padding: 11px 34px 12px;
+                font-size: 14px;
+                font-family: 'Gilroy', sans-serif;
+
+                @media screen and (max-width: $phone) {
+                    padding: 11px 24px 12px 24px;
+                }
+
+                &.active {
+                    border-color: #000;
+                }
+
+                &:not(:last-child) {
+                    margin-right: 16px;
+                }
+            }
+
+            &__body {
+                display: none;
+
+                &.active {
+                    display: block;
+                }
+
+                & ul {
+                    list-style: none;
+
+                    & li {
+                        display: flex;
+                        align-items: center;
+
+                        @media screen and (max-width: $tabel) {
+                            text-align: start;
+                        }
+                        
+
+                        &:not(:last-child) {
+                            margin-bottom: 8px;
+                        }
+
+                        &::before {
+                            content: '';
+                            display: block;
+                            width: 10px;
+                            height: 10px;
+                            background: url('../../../imgs/svg/dots-list.svg') no-repeat;
+                            background-size: cover;
+                            border-radius: 8px;
+                            margin-right: 12.86px;
+                            transform: rotate(270deg);
+                        }
+                    }
+                }
+            }
+        } 
+
+        &__btn {
+            max-width: 180px;
+            width: 100%;
+            border: none;
+        }
+    }
+
+    & .block-img {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+
+        @media screen and (max-width: $tabel) {
+            width: auto;
+            justify-content: center;
+            margin-top: 180px;
+            
+        }        
+
+        &__decor {
+            position: relative;
+            top: -90px;
+            width: 489.69px;
+            height: 489.69px;
+            border-radius: 72px;
+            background: #FB242B;
+            transform: rotate(-45deg);
+
+            @media screen and (max-width: $minMack) {
+                right: -100px;
+            }
+
+            @media screen and (max-width: $tabel) {
+                top: 0;
+                left: 0;
+            }
+
+            @media screen and (max-width: $minTabel) {
+                min-width: 395px;
+                width: 395px;
+                height: 395px;
+            }
+
+            &::before {
+                content: '';
+                display: block;
+                width: 110%;
+                height: 110%;
+                position: absolute;
+                top: -5%;
+                left: -5%;
+                border-radius: 72px;
+                background: rgba(251, 36, 43, 0.6);
+                z-index: -1;
+            }
+        }
+
+        &__item {
+            display: flex;
+            transform: rotate(45deg);
+        }
+
+        &__chats-1 {
+            position: absolute;
+            top: -100px;
+            left: 87px;
+            transition: all 500s;
+            
+            &.active {
+                animation: translate 1 ease 0.5s;
+            }
+
+            @media screen and (max-width: $tabel) {
+                top: -105px;
+                left: 151px;
+            }
+
+            @media screen and (max-width: $minTabel) {
+                width: 250px;
+                top: -70px;
+                left: 115px;
+            }
+
+            & img {
+                @media screen and (max-width: $minTabel) {
+                    width: 100%;
+                }
+            }
+        }
+
+        &__chats-2 {
+            position: absolute;
+            top: 0;
+            left: 335px;
+
+            &.active {
+                animation: translate 1 ease 0.5s;
+            }
+
+            @media screen and (max-width: $tabel) {
+                top: -5px;
+                left: 422px;
+            }
+
+            @media screen and (max-width: $minTabel) {
+                width: 250px;
+                top: 20px;
+                left: 320px;
+            }
+
+            & img {
+                @media screen and (max-width: $minTabel) {
+                    width: 100%;
+                }
+            }
+        }
+
+        &__stars {
+            position: absolute;
+            top: -210px;
+            left: 10px;
+            transform: rotate(45deg);
+
+            @media screen and (max-width: $tabel) {
+                left: 85px;
+            }
+
+            @media screen and (max-width: $minTabel) {
+                left: 150px;
+                z-index: -1;
+            }
+        }
+
+        &__cubes {
+            position: absolute;
+            top: 63px;
+            right: -107px;
+            width: 312.54px;
+            height: 236.51px;
+            transform: rotate(225deg);
+
+            @media screen and (max-width: $tabel) {
+                top: 79px;
+                right: -107px;
+            }
+        }
+    }
+
+    & .decor-one {
+        width: 477.93px;
+        height: 477.93px;
+        position: absolute;
+        left: 0;
+        top: 10px;
+        background: radial-gradient(95.51% 95.51% at 50% 50%, rgba(218, 218, 218, 0.15) 0%, rgba(250, 250, 250, 0.15) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+        border-radius: 28.2072px;
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes print-focus {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes translate {
+    0% {opacity: 1;}
+    50% {opacity: 0.1;}
+    100% {opacity: 1;}
+}

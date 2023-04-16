@@ -1,0 +1,165 @@
+@import '../../var.scss';
+
+.wrapper-form {
+    width: 40%;
+    margin: 80px 0;
+
+    @media screen and (max-width: $tabel) {
+        width: 100%;
+        margin: 0;
+        margin-bottom: -50px;
+        z-index: 1;
+        order: -1;
+    }
+
+    @media screen and (max-width: $phone) {
+        margin-bottom: 0;
+    }
+
+    &__inner {
+        max-width: 424px;
+        width: 100%;
+        position: relative;
+        padding: 48px;
+        text-align: center;
+        margin: 0 auto;
+        background: #fff;
+        border-radius: 34px;
+
+        @media screen and (max-width: $phone) {
+            padding: 24px;
+        }
+
+        &::before {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: -32px;
+            left: -32px;
+            width: calc(100% + 64px);
+            height: calc(100% + 64px);
+            background: rgba(250, 250, 250, 0.6);
+            border-radius: 34px;
+            z-index: -1;
+
+            @media screen and (max-width: $phone) {
+                display: none;
+            }
+        }
+    }
+
+
+
+    &__title {
+        margin: 0 0 32px 0;
+        font-size: 28px;
+        line-height: 34px;
+        font-family: 'Gilroy', sans-serif;
+
+        @media screen and (max-width: $mack) {
+            font-size: 24px;
+        }
+
+        @media screen and (max-width: $minTabel) {
+            font-size: 20px;
+        }
+    }
+
+    &__item {
+        position: relative;
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+
+        & label {
+            display: block;
+            text-align: start;
+            font-size: 14px;
+            color: rgba(92, 92, 92, 1);
+            margin-bottom: 8px;
+
+            @media screen and (max-width: $mack) {
+                font-size: 12px;
+            }
+        }
+
+        & input {
+            width: 100%;
+            padding: 14px 16px;
+            font-size: 16px;
+            outline: none;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            background: rgba(243, 244, 245, 1);
+            transition: all 0.3s;
+
+            &.error {
+                border-color: red;
+            }
+
+            &:placeholder-shown {
+                color: rgba(189, 189, 189, 1);
+            }
+
+            &:focus, &:not(:placeholder-shown) {
+                border-color: #000;
+
+                &.error {
+                    border-color: red;
+                }
+            }
+        }
+
+        & p.error {
+            display: block;
+            position: absolute;
+            bottom: -24px;
+            right: 0;
+            margin: 0;
+            font-size: 12px;
+            color: red;
+        }
+    }
+
+    &__buttons {
+
+        & .wrapper-form__submit {
+            width: 100%;
+            max-width: 210px;
+            font-size: 20px;
+            margin-top: 16px;
+            border: none;
+
+            @media screen and (max-width: $mack) {
+                max-width: 180px;
+                font-size: 16px;
+            }
+
+            @media screen and (max-width: $phone) {
+                border-top: 34px;
+            }
+        }
+    }
+
+    &__sub-label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 14px;
+        font-size: 16px;
+        color: rgba(189, 189, 189, 1);
+        font-family: 'Gilroy', sans-serif;
+
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 16px;
+            height: 18px;
+            background: url('../../imgs/svg/promise.svg');
+            margin-left: 8px;
+        }
+    }
+
+
+}

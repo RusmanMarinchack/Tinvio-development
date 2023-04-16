@@ -1,0 +1,166 @@
+@import '../../../var.scss';
+
+.section-contact {
+    position: relative;
+
+    &__wrap {
+        margin-right: 50px;
+        border-bottom-right-radius: 45px;
+        overflow: hidden;
+
+        @media screen and (max-width: $tabel) {
+            margin-right: 0;
+        }
+    }
+
+    &__wrapper-rotate {
+        padding: 88px 0 188px 0;
+        background: rgba(246, 246, 246, 1);
+        border-top-right-radius: 45px;
+        transform-origin: left center;
+        transform: skewY(8deg);
+        
+
+       @media screen and (max-width: $mack) {
+            padding-bottom: 140px;
+        }
+
+        @media screen and (max-width: $minTabel) {
+            padding: 15px 0;
+        }
+
+        @media screen and (max-width: $phone) {
+            background: #fff;
+        }
+    }
+
+    &__container {
+        transform: skewY(-8deg);
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+
+        @media screen and (max-width: $tabel) {
+            flex-direction: column;
+        }
+    }
+
+    &__title {
+        max-width: 600px;
+        width: 100%;
+        margin-bottom: -130px;
+        line-height: 54px;
+        position: relative;
+        z-index: 3;
+
+        @media screen and (max-width: $tabel) {
+            max-width: 100%;
+            text-align: center;
+            margin-bottom: 64px;
+            line-height: 32px;
+        }
+
+        @media screen and (max-width: $phone) {
+            margin-bottom: 49px;
+        }
+    }
+
+    & .section-contact-map {
+        width: 60%;
+        position: relative;
+
+        @media screen and (max-width: 1279.98px) {
+            height: 600px;
+        }
+
+        @media screen and (max-width: $tabel) {
+            width: 100%;
+        }
+
+        &__map {
+            width: 986px;
+            height: 688px;
+            position: relative;
+            left: -310px;
+            top: -50px;
+
+            @media screen and (max-width: $tabel) {
+                left: 40%;
+                transform: translateX(-50%);
+            }
+
+            @media screen and (max-width: $tabel) {
+                width: 699px;
+                height: 501px;
+            }
+    
+            @media screen and (max-width: $phone) {
+                width: 559px;
+                height: 100%;
+            }
+
+            @media screen and (max-width: 449.98px) {
+                left: 20%;
+            }
+
+
+            & img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+                // object-position: right;
+            }
+        }
+    }
+
+
+
+    &__decor-stars {
+        position: absolute;
+        top: 11vw;
+        right: 0px;
+
+        @media screen and (max-width: $tabel) {
+            display: none;
+        }
+    }
+
+    &__decor {
+        position: absolute;
+
+        &.decor-1 {
+            display: none;
+            width: 150px;
+            right: 400px;
+            top: 50%;
+            z-index: -1;
+
+            @media screen and (max-width: $minMack) {
+                display: block;
+            }
+
+            @media screen and (max-width: $tabel) {
+                right: 700px;
+                top: 5%;
+            }
+
+        }
+
+        &.decor-2 {
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+
+            @media screen and (max-width: $tabel) {
+                bottom: 50%;
+            }
+        }
+    }
+} 

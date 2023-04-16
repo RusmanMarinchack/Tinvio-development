@@ -1,0 +1,115 @@
+@import '../../../var.scss';
+
+.sounds-easy {
+    position: relative;
+    padding: 50px 0;
+    
+    
+
+    &__container {
+        max-width: 100%;
+        margin-right: 54px;
+        background: #363636;
+        border-bottom-right-radius: 45px;
+        border-top-right-radius: 45px;
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+
+        @media screen and (min-width: $bigScreann) {
+            margin-right: 234px;
+        }
+
+        @media screen and (max-width: $tabel) {
+            margin-right: 0px;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 54px;
+        position: relative;
+        z-index: 1;
+        
+
+        @media screen and (min-width: $bigScreann) {
+            margin-left: 160px;
+        }
+
+        @media screen and (max-width: $tabel) {
+            flex-direction: column;
+            padding: 48px 15px;
+        }
+    }
+
+    &__title {
+        max-width: 866px;
+        margin: 0;
+        margin-right: 95px;
+        font-weight: 500;
+        line-height: 53px;
+
+        @media screen and (max-width: $minMack) {
+            margin-right: 160px;
+        }
+
+        @media screen and (max-width: $tabel) {
+            text-align: center;
+            margin-right: 0;
+            line-height: 39px;
+            margin-bottom: 24px;
+        }
+
+        @media screen and (max-width: $phone) {
+            font-size: 24px;
+        }
+    }
+
+    &__btn {
+        border: none;
+    }
+
+    &__stars {
+        position: absolute;
+        right: 180px;
+        bottom: 0px;
+
+        @media screen and (max-width: $bigScreann) {
+            right: 0;
+        }
+    }
+
+    & .decor-1 {
+        position: absolute;
+        bottom: -80px;
+        right: 50%;
+
+        @media screen and (max-width: $tabel) {
+            right: -50px;
+        }
+
+        @media screen and (max-width: $phone) {
+            right: -150px;
+        }
+    }
+
+    & .decor-2 {
+        position: absolute;
+        top: -125px;
+        left: 179px;
+        width: 278px;
+        height: 278px;
+        border-radius: 27px;
+        background: #636363;
+        opacity: 0.2;
+        transform: rotate(-45deg);
+
+        @media screen and (max-width: $tabel) {
+            top: -100px;
+            left: -150px;
+        }
+    }
+}

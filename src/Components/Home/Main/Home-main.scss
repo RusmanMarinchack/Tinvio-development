@@ -1,0 +1,250 @@
+@import '../../../var.scss';
+
+.home-main {    
+    position: relative;
+
+    &__container {
+    }
+
+    &__wrapper {
+
+    }
+
+    & .blok-text {
+        padding-top: 260px;
+        position: relative;
+        z-index: 1;
+
+        @media screen and (max-width: $tabel) {
+            padding-top: 126px;
+        }
+
+        &__inner {
+            max-width: 478px;
+            position: relative;
+
+            @media screen and (max-width: $minMack) {
+                max-width: 373px;
+                margin-left: 40px;
+            }
+
+            @media screen and (max-width: $tabel) {
+                max-width: 478px;
+                text-align: center;
+                background: transparent;
+                margin: 0 auto;
+            }
+        }
+
+        &__title {
+            position: relative;
+            margin-bottom: 16px;
+
+            @media screen and (max-width: $minMack) {
+                font-size: 32px;
+            }
+
+            @media screen and (max-width: $tabel) {
+                max-width: 333px;
+                margin: 0 auto;
+            }
+
+            @media screen and (max-width: $phone) {
+                font-size: 28px;
+            }
+
+            & .stars {
+                position: absolute;
+                top: -40px;
+                left: -40px;
+                display: block;
+                width: 88px;
+                height: 80px;
+
+                @media screen and (max-width: $phone) {
+                    width: 50px;
+                    top: -34px;
+                    left: -10px;
+                }
+            }
+        }
+
+        & p {
+            font-size: 20px;
+            margin-bottom: 32px;
+            color: #5C5C5C;
+
+            @media screen and (max-width: $mack) {
+                font-size: 18px;
+            }
+        }
+
+        &__btn {
+            margin-bottom: 12px;
+            border: none;
+        }
+
+        &__label {
+            max-width: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Gilroy', sans-serif;
+
+            @media screen and (max-width: $tabel) {
+                max-width: 100%;
+            }
+
+            &::after {
+                content: '';
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                margin-left: 8px;
+                background: url('../../../imgs/svg/smile.svg');
+            }
+        }
+
+    }
+
+    & .blok-img {
+        position: absolute;
+        left: 55%;  
+        top: 20px;
+        width: 964.17px;
+        height: 964.17px;
+        background: #FB242B;
+        border-radius: 125.316px;
+        transform: rotate(-45deg);
+        z-index: 0;
+
+        @media screen and (max-width: $tabel) {
+            width: 921.24px;
+            height: 921.24px;
+            left: -465px;
+            top: 525px;
+        }
+
+        @media screen and (max-width: $phone) {
+            width: 658.24px;
+            height: 658.24px;
+            left: -315px;
+            top: 540px;
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            width: 110%;
+            height: 110%;
+            position: absolute;
+            left: -5%;
+            top: -5%;
+            background: rgba(251, 36, 43, 0.6);
+            border-radius: 136.463px;
+            z-index: -2;
+        }
+
+        &__img-mob {
+            width: 253px;
+            margin-right: -95px;
+
+            @media screen and (max-width: $phone) {
+                width: 185.82px;
+            }
+        }
+
+        &__img-desctop {
+            width: 829px;
+            position: relative;
+            top: -67px;
+
+            @media screen and (max-width: $phone) {
+                width: 550px;
+                left: 20px;
+            }
+        }
+
+        & .decors {
+
+            &__item {
+                position: absolute;
+                left: -164px;
+                bottom: 30%;
+                transform: rotate(45deg);
+
+                @media screen and (max-width: $tabel) {
+                    left: auto;
+                    right: -725px;
+                    top: 450px;
+                }
+
+                @media screen and (max-width: $phone) {
+                    right: -380px;
+                    top: 286px;
+                }
+            }
+
+            &__min {
+                position: absolute;
+                top: -10px;
+                left: 90px;
+                transform: rotate(-45deg);
+                z-index: 1;
+
+                @media screen and (max-width: $tabel) {
+                    top: 160px;
+                    left: auto;
+                    right: -100px;
+                    transform: rotate(45deg);
+                }
+            }
+
+            &__big {
+                position: absolute;
+                top: 50%;
+                right: 57%;
+                transform: rotate(-45deg);
+
+                @media screen and (max-width: $tabel) {
+                    top: 583px;
+                    right: -55px;
+                    transform: rotate(45deg);
+                }
+            }
+        }   
+    }
+
+    & .decor-one {
+        width: 256.75px;
+        height: 256.75px;
+        position: absolute;
+        top: -216px;
+        left: 40%;
+        background: radial-gradient(95.51% 95.51% at 50% 50%, rgba(218, 218, 218, 0.15) 0%, rgba(250, 250, 250, 0.15) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+        border-radius: 45.0024px;
+        transform: rotate(-45deg);
+    }
+
+    & .decor-two {
+        width: 343.78px;
+        height: 343.78px;
+        position: absolute;
+        bottom: 0;
+        left: 138px;
+        background: radial-gradient(95.51% 95.51% at 50% 50%, rgba(218, 218, 218, 0.15) 0%, rgba(250, 250, 250, 0.15) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+        border-radius: 32px;
+        transform: rotate(-45deg);
+    }
+
+    & .decor-three {
+        width: 162px;
+        position: absolute;
+        bottom: 100px;
+        left: 235px;
+
+        & img {
+            width: 100%;
+        }
+    }
+}

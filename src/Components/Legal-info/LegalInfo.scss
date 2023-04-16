@@ -1,0 +1,121 @@
+@import '../../var.scss';
+
+.legal-info {
+    padding: 145px 0 80px 0;
+
+    &__container {
+
+    }
+
+    &__title {
+        text-align: center;
+        margin: 0;
+        margin-bottom: 40px;
+
+        @media screen and (max-width: $bigScreann) {
+            font-size: 36px;
+        }
+    }
+
+    &__wrapper {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    &__header {
+        display: flex;
+        align-items: flex-end;
+
+        & .legal-info__btn {
+            display: block;
+            flex: 1 1 0%;
+            position: relative;
+            padding: 7px;
+            font-size: 28px;
+            font-family: "Gilroy", sans-serif;
+            text-decoration: none;
+            text-align: center;
+            font-weight: 400;
+            line-height: 33px;
+            color: rgba(196, 196, 196, 1);
+
+            @media screen and (max-width: $bigScreann) {
+                font-size: 24px;
+            }
+
+            @media screen and (max-width: $phone) {
+                font-size: 18px;
+                padding: 3px 7px;
+            }
+
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background: rgba(196, 196, 196, 1);
+            }
+
+            &.active {
+                font-weight: 600;
+                color: rgba(255, 71, 77, 1);
+
+                &::before {
+                    height: 2px;
+                    background: rgba(255, 71, 77, 1);
+                }
+            }
+        }
+    }
+
+    & .legal-info-body {
+        padding: 32px 0;
+
+        &__item {
+
+            &:not(:last-child) {
+                margin-bottom: 48px;
+            }
+
+            & h5 {
+                margin: 0;
+                margin-bottom: 16px;
+                font-size: 18px;
+                font-family: "Gilroy", sans-serif;
+                color: rgba(33, 33, 33, 1);
+
+                @media screen and (max-width: $bigScreann) {
+                    font-size: 16px;
+                }
+
+                @media screen and (max-width: $phone) {
+                    margin-bottom: 28px;
+                }
+            }
+
+            & ul {
+                margin-left: 20px;
+
+                & li {
+
+                }
+            }
+
+            & p {
+                margin: 0;
+                font-size: 16px;
+
+                @media screen and (max-width: $bigScreann) {
+                    font-size: 14px;
+                }
+
+                &:not(:last-child)  {
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
+}

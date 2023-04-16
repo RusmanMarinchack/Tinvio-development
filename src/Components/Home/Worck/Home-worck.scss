@@ -1,0 +1,353 @@
+@import '../../../var.scss';
+
+.section-worck {
+    margin-top: 265px;
+    position: relative;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background: #F6F6F6;
+    margin-left: 39.65px;
+    transform: skewY(-8deg);
+
+    @media screen and (max-width: 1199.98px) {
+        margin-left: 0;
+    }
+
+    @media screen and (max-width: $tabel) {
+        margin-top: 650px;
+        padding: 100px 0;
+    }
+
+    @media screen and (max-width: 575.98px) {
+        margin-top: 500px;
+    }
+
+    &__container {
+       transform: skewY(8deg);
+        
+    }
+
+    &__decor {
+        position: absolute;
+
+        &.decor-1 {
+            bottom: 0;
+            right: 0;
+            width: 253px;
+            z-index: -1;
+        }
+        &.decor-2 {
+            bottom: -182px;
+            left: 0;
+            width: 295px;
+            z-index: -1;
+
+            @media screen and (max-width: $minTabel) {
+                bottom: auto;
+                top: 20%;
+            }
+
+            @media screen and (max-width: $phone) {
+                width: 200px;
+            }
+        }
+
+        &.decor-3 {
+            width: 496.7px;
+            height: 496.7px;
+            position: absolute;
+            top: 0;
+            right: -50px;
+            background: radial-gradient(95.51% 95.51% at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(250, 250, 250, 0.2) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+            border-radius: 77.813px;
+            transform: rotate(-45deg);
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 662.49px;
+        padding-bottom: 125px;
+        position: relative;
+        z-index: 1;
+
+        @media screen and (max-width: $tabel) {
+            height: 750px;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    & .worck-info {
+        width: 570px;
+
+        @media screen and (max-width: $tabel) {
+            display: flex;
+            justify-content: center;
+            transform: translateX(-28%);
+        }
+
+        &__list {
+
+        }
+
+        &__item {
+            width: 271.77px;
+            position: relative;
+
+            @media screen and (max-width: $minTabel) {
+                width: 187.16px;
+
+                & img {
+                    width: 100%;
+                }
+            }
+
+            & .worck-info__stars {
+                @media screen and (max-width: $minTabel) {
+                    width: 33.16px;
+                }
+            }
+
+            & .worck-info-card__icon {
+                z-index: 1;
+            }
+
+            &.chats {
+                position: relative;
+                top: 34px;
+                left: 25px;
+
+                @media screen and (max-width: $minTabel) {
+                    left: 85px;
+                }
+
+                & .worck-info__stars {
+                    position: absolute;
+                    right: 70px;
+                    top: -50px;
+
+                    @media screen and (max-width: $minTabel) {
+                        right: 40px;
+                        top: -30px;
+                    }
+                }
+
+                & .worck-info-card {
+                    &__icon {
+                        position: absolute;
+                        right: -30px;
+                        top: -5px;
+
+                        @media screen and (max-width: $minTabel) {
+                            right: -25px;
+                            top: -10px;
+                        }
+                    }
+                } 
+            }
+
+            &.orders {
+                position: relative;
+                top: 87px;
+                left: 288.44px;
+
+                @media screen and (max-width: $minTabel) {
+                    top: 68px;
+                    left: 252.44px;
+                }
+
+                & .worck-info__stars {
+                    position: absolute;
+                    right: -5px;
+                    top: -55px;
+
+                    @media screen and (max-width: $minTabel) {
+                        top: -20px;
+                    }
+                }
+
+                & .worck-info-card {
+                    &__icon {
+                        position: absolute;
+                        left: -24px;
+                        bottom: -18px;
+
+                        @media screen and (max-width: $minTabel) {
+                            left: -25px;
+                            bottom: -15px;
+                        }
+                    }
+                } 
+            }
+
+            &.payments {
+                position: relative;
+                top: 120px;
+                left: 12px;
+
+                @media screen and (max-width: $minTabel) {
+                    top: 75px;
+                    left: 70px;
+                }
+
+                & .worck-info__stars {
+                    position: absolute;
+
+                    &.stars-1 {
+                        right: -55px;
+                        top: 0px;
+
+                        @media screen and (max-width: $minTabel) {
+                            right: -40px;
+                        }
+                    }
+
+                    &.stars-2 {
+                        left: 70px;
+                        top: -70px;
+
+                        @media screen and (max-width: $minTabel) {
+                            left: 50px;
+                            top: -50px;
+                        }
+                    }
+
+                }
+
+                & .worck-info-card {
+
+                    &__icon {
+                        position: absolute;
+                        left: -15px;
+                        top: -45px;
+
+                        @media screen and (max-width: $minTabel) {
+                            left: -5px;
+                            top: -30px;
+                        }
+                    }
+                }
+            }
+ 
+            & .worck-info-card {
+                padding: 10px 40px;
+                text-align: center;
+                background: #FFFFFF;
+                border-radius: 19.0256px;
+                box-shadow: rgba(33, 33, 33, 0.1) 4px 7px 20px 0px;
+                transform: rotate(8deg);
+
+                @media screen and (max-width: $minTabel) {
+                    padding: 10px 18px;
+                }
+
+                &__icon {
+                    width: 60px;
+                    height: 60px;
+
+                    @media screen and (max-width: $minTabel) {
+                        width: 50px;
+                        height: 50px;
+                    }
+
+                    & img {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+
+                &__title {
+                    font-size: 20.61px;
+                    font-weight: 700;
+                    margin: 0;
+                    margin-bottom: 10px;
+                    font-family: 'Gilroy', sans-serif;
+                    
+                    @media screen and (max-width: $minTabel) {
+                        font-size: 14px;
+                        margin-bottom: 0;
+                    }
+                }
+
+                & p {
+                    font-size: 12px;
+                    line-height: 14.52px;
+                    font-weight: 400;
+                    color:rgba(92, 92, 92, 1);
+                    margin: 0;
+
+                    @media screen and (max-width: $minTabel) {
+                        font-size: 10px;
+                    }
+                }
+
+                &__arrow-right {
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translateX(100%);
+
+                    @media screen and (max-width: $minTabel) {
+                        width: 82px;
+                        top: 35%;
+                    }
+                }
+
+                &__arrow-left {
+                    position: absolute;
+                    top: 20px;
+                    left: 0;
+                    transform: translateX(-100%);
+
+                    @media screen and (max-width: $minTabel) {
+                        width: 82px;
+                        top: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    & .worck-content {
+        width: 492px;
+
+        @media screen and (max-width: $minMack) {
+            width: 380px;
+        }
+
+        @media screen and (max-width: $tabel) {
+            max-width: 429px;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 50px;
+            order: -1;
+        }
+        
+        &__inner {
+            margin-left: 20px;
+        }
+
+        &__title {
+            font-weight: 600;
+        }
+
+        & p {
+            font-weight: 400;
+            color: rgba(92, 92, 92, 1);
+
+            @media screen and (max-width: $minTabel) {
+                font-size: 14px;
+            }
+        }
+
+        &__btn-video {
+            max-width: 220px;
+            width: 100%;
+            padding: 17px;
+            border: none;
+        }
+    }
+}

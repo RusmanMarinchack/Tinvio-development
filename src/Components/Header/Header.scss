@@ -1,0 +1,372 @@
+@import '../../var.scss';
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+
+    @media screen and (max-width: $tabel) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #fff;
+    }
+
+    @media screen and (min-width: $tabel) {
+        &._scroll {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            backdrop-filter: blur(40px);
+            background: rgb(251 251 251 / 80%);
+    
+            & .header__container {
+                padding-top: 7px;
+                padding-bottom: 7px;
+            }
+            
+            & .header__btn-start {
+                background: #FF474D;
+                color: #fff;
+    
+                &:hover {
+                    background: #fb5d62;
+                  }
+            }
+        }
+    }
+
+    &__container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 21.38px;
+        padding-bottom: 21.38px;
+
+        @media screen and (max-width: $tabel) {
+            padding-top: 20.38px;
+            padding-bottom: 20.38px; 
+        }
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        width: auto;
+
+        & a {
+            display: block;
+            margin-right: 16px;
+
+            & img {
+                display: block;
+                width: 132px;
+
+                @media screen and (max-width: $bigScreann) {
+                    width: 114px;
+                }
+            }
+        }
+
+        & .lenguages {
+            position: relative;
+            transition: all 0.3s;
+            z-index: 2;
+
+            @media screen and (max-width: $tabel) {
+                opacity: 0;
+                visibility: hidden;
+
+                &.active {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+
+            &__active {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                & span {
+                    margin-right: 4px;
+                    
+                }
+
+                &.active ~ .lenguages__list {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0px);
+                }
+            }
+
+            &__list {
+                position: absolute;
+                top: calc(100% + 4px);
+                left: 0;
+                padding: 12px;
+                list-style: none;
+                background: #FFFFFF;
+                border-radius: 8px;
+                transition: all 0.2s;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(10px);
+                box-shadow: 8px 7px 12px -4px rgba(33, 33, 33, 0.3);;
+            }
+
+            &__item {
+                &:not(:last-child) {
+                    margin-bottom: 8px;
+                }
+
+                span  {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    & .nav {
+        @media screen and (max-width: $tabel) {
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: center;
+            // align-items: center;
+            position: fixed;
+            width: 100%;
+            height: calc(100% - 80px);
+            top: 0;
+            left: -105%;
+            margin-top: 80px;
+            padding: 16px;
+            background: #FFFFFF;
+            transition: all 0.4s;
+            z-index: 1;
+
+            @media screen and (max-width: $phone) {
+                // min-height: 500px;
+            }
+
+            &.active {
+                left: 0;
+            }
+        }
+
+        & .nav-footer {
+            display: none;
+            width: 100%;
+            position: absolute;
+            bottom: 16px;
+            left: 0;
+
+            @media screen and (max-width: $tabel) {
+                display: block;
+            }
+
+            @media screen and (max-width: $phone) {
+                display: none;
+            }
+
+            & .header__btn-start {
+                max-width: 188px;
+                width: 100%;
+                margin: 0 auto;
+                margin-bottom: 18px;
+            }
+
+            &__list {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                list-style: none;
+
+                @media screen and (max-width: $phone) {
+                    overflow: auto;
+                }
+            }
+
+            &__item {
+                &:not(:last-child) {
+                    margin-right: 15px;
+                }
+
+                &:nth-child(2n) {
+                    margin-right: 32px;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            &__link {
+                    display: block;
+                    & img {
+                        width: 100%;
+                    }
+                
+            }
+        }
+
+        &__menu {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            list-style: none;
+
+            @media screen and (max-width: $tabel) {
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            @media screen and (max-height: 499.98px) {
+                justify-content: start;
+                overflow: auto;
+            }
+        }
+
+        &__item {
+            @media screen and (max-width: $tabel) {
+                font-size: 20px;
+            }
+
+            &:not(:last-child) {
+                margin-right: 72px;
+
+                @media screen and (max-width: $tabel) {
+                    margin-right: 0;
+                    margin-bottom: 48px;
+                }
+
+                @media screen and (max-width: $phone) {
+                    margin-right: 0;
+                    margin-bottom: 40px;
+                }
+            }
+
+            
+        }
+
+        &__link {
+            text-transform: capitalize;
+            font-size: 18px;
+            text-decoration: none;
+            font-weight: 600;
+            color: #212121;
+            transition: all 0.3s;
+            font-family: 'Gilroy', sans-serif;
+
+            @media screen and (max-width: $bigScreann) {
+                font-size: 16px;
+            }
+
+            @media screen and (max-width: $tabel) {
+                font-size: 20px;
+            }
+
+            @media screen and (max-width: $phone) {
+                font-size: 18px;
+            }
+
+            &:hover {
+                color: #FF474D;
+            }
+
+            &.active {
+                color: #FF474D;
+            }
+        }
+    }
+
+    &__block-btns {
+        max-width: 156px;
+        width: 100%;
+
+        @media screen and (max-width: $bigScreann) {
+            max-width: 129px;
+        }
+
+        @media screen and (max-width: $tabel) {
+            margin: 0 auto;
+        }
+    }
+
+    &__btn-start {
+        width: 100%;
+        border: 1px solid transparent;
+        font-weight: 700;
+        font-size: 14px;
+        transition: all 0.3s;
+      
+        @media screen and (max-width: $tabel) {
+          display: none;
+        }
+      
+        &.mob {
+          @media screen and (max-width: $tabel) {
+            display: block;
+          }
+        } 
+      }
+
+    &__burger {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        
+
+        @media screen and (max-width: $tabel) {
+            display: flex;
+        }
+
+        &.active {
+            & span {
+                background: transparent;
+
+                &::before {
+                    top: 0;
+                    transform: rotate(-45deg);
+                }
+
+                &::after {
+                    top: 0;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+
+        & span {
+            display: block;
+            width: 100%;
+            height: 2.84px;
+            position: relative;
+            background: #5C5C5C;
+            border-radius: 100px;
+            transition: all 0.3s;
+
+            &::before, &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 2.84px;
+                position: absolute;
+                top: 4.74px;
+                background: #5C5C5C;
+                border-radius: 100px;
+                transition: all 0.3s;
+            }
+
+            &::after {
+                top: -4.74px;
+            }
+        }
+    }
+}

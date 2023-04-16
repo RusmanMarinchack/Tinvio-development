@@ -1,0 +1,202 @@
+@import '../../../var.scss';
+
+.faq {
+    position: relative;
+    overflow: hidden;
+
+    &__container {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__wrapper {
+
+        & .accordeon {
+
+            &__item {
+
+                &:not(:first-child) {
+                    border-top: 1px solid rgba(210, 210, 210, 1);
+                }
+
+                &.active {
+
+                    & .plus {
+
+                        &::before {
+                            transform: rotate(0deg);
+                        }
+                    }
+                }
+
+            }
+
+            &__header {
+
+            }
+
+            &__btn {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 20px;
+                text-align: start;
+                padding: 32px 0;
+                border: none;
+                background: transparent;
+                font-family: "Gilroy", sans-serif;
+
+                @media screen and (max-width: $phone) {
+                    font-size: 16px;
+                    padding: 24px 0;
+                }
+
+                & .plus {
+                    display: block;
+                    width: 20px;
+                    height: 2px;
+                    background: #000;
+                    position: relative;
+                    pointer-events: none;
+
+                    &::before {
+                        content: '';
+                        display: block;
+                        width: 20px;
+                        height: 2px;
+                        background: #000;
+                        transform: rotate(90deg);
+                        transition: all 0.3s;
+                    }
+                }
+            }
+
+            &__body {
+                height: 0;
+                overflow: hidden;
+                transition: all 0.3s;
+
+                & p {
+                    margin: 0;
+                    line-height: 23px;
+                    padding-bottom: 32px;
+
+                    @media screen and (max-width: $phone) {
+                        padding-bottom: 24px;
+                    }
+                }
+            }
+        }
+    }
+
+    & .decor {
+        &.one {
+            width: 724.76px;
+            height: 724.76px;
+            position: absolute;
+            bottom: -400px;
+            left: -442px;
+            background: radial-gradient(95.51% 95.51% at 50% 50%, rgba(218, 218, 218, 0.15) 0%, rgba(250, 250, 250, 0.15) 100%);
+            border-radius: 67.463px;
+            transform: rotate(-45deg);
+
+            @media screen and (max-width: $mack) {
+                left: -522px;
+            }
+
+            @media screen and (max-width: $minMack) {
+                left: -606px;
+            }
+
+            @media screen and (max-width: $minTabel) {
+                left: -630px;
+            }
+
+            @media screen and (max-width: $phone) {
+                left: -505px;
+            }
+        }
+
+        &.two {
+            width: 724.76px;
+            height: 724.76px;
+            position: absolute;
+            right: -445px;
+            top: -50px;
+            background: radial-gradient(95.51% 95.51% at 50% 50%, rgba(218, 218, 218, 0.15) 0%, rgba(250, 250, 250, 0.15) 100%);
+            border-radius: 67.463px;
+            transform: rotate(-45deg);
+
+            @media screen and (max-width: $mack) {
+                right: -505px;
+            }
+
+            @media screen and (max-width: $minMack) {
+                right: -545px;
+            }
+
+            @media screen and (max-width: $tabel) {
+                right: -717px;
+            }
+
+            @media screen and (max-width: $minTabel) {
+                right: -700px;
+            }
+
+            @media screen and (max-width: $phone) {
+                right: -500px;
+            }
+        }
+
+        &.three {
+            width: 470.67px;
+            height: 470.67px;
+            position: absolute;
+            right: 41px;
+            bottom: -345px;
+            background: radial-gradient(95.51% 95.51% at 50% 50%, rgba(218, 218, 218, 0.15) 0%, rgba(250, 250, 250, 0.15) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+            border-radius: 43.8115px;
+            transform: rotate(-45deg);
+
+            @media screen and (max-width: $mack) {
+                right: -278px;
+            }
+
+            @media screen and (max-width: $minMack) {
+                right: -490px;
+            }
+
+            @media screen and (max-width: $minTabel) {
+                right: -300px;
+            }
+        }
+
+        &.four {
+            width: 305px;
+            position: absolute;
+            bottom: 50px;
+            left: 73px;
+            opacity: 0.5;
+
+             @media screen and (max-width: $tabel) {
+                opacity: 0.2;
+            }
+        }
+
+        &.five {
+            position: absolute;
+            right: -50px;
+            bottom: -100px;
+            opacity: 0.5;
+
+             @media screen and (max-width: $tabel) {
+                opacity: 0.2;
+            }
+        }
+    }
+}

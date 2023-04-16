@@ -1,0 +1,178 @@
+@import '../../var.scss';
+
+.footer {
+
+    & a {
+        text-decoration: none;
+    }
+
+    & .well {
+        width: 1px;
+        display: inline-block;
+        background: rgba(196, 196, 196, 1);
+        margin-right: 24px;
+
+      
+    }
+
+    & .footer-content {
+        padding: 48px 0 22px 0;
+
+        @media screen and (max-width: $tabel) {
+            padding: 32px 0 12px 0;
+        }
+
+        & .nav-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @media screen and (max-width: $tabel) {
+                flex-direction: column;
+            }
+
+            &__links {
+                display: flex;
+                align-items: center;
+
+                @media screen and (max-width: $phone) {
+                    flex-direction: column;
+                } 
+
+                & .well {
+                    height: 32px;
+
+                    @media screen and (max-width: $tabel) {
+                        display: none;
+                    }
+                }
+            }
+
+            &__list {
+                display: flex;
+                list-style: none;
+
+                &:first-child {
+                    margin-right: 24px;
+
+                    @media screen and (max-width: $phone) {
+                        margin-right: 0;
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+
+            &__item {
+                &:not(:last-child) {
+                    margin-right: 16px;
+
+                   
+                }
+            }
+        }
+
+        &__inner {
+            display: flex;
+            align-items: center;
+
+            @media screen and (max-width: $tabel) {
+                flex-direction: column;
+                margin-bottom: 32px;
+            }
+
+            & .well {
+                height: 32px;
+
+                @media screen and (max-width: $tabel) {
+                    display: none;
+                }
+            }
+
+            & ul {
+                display: flex;
+                align-items: center;
+                list-style: none;
+
+                @media screen and (max-width: $phone) {
+                    flex-direction: column;
+                }
+
+                & li {
+                    &:not(:last-child) {
+                        margin-right: 32px;
+
+                        @media screen and (max-width: $tabel) {
+                            margin-right: 56px;
+                        }
+
+                        @media screen and (max-width: $phone) {
+                            margin-right: 0;
+                            margin-bottom: 16px;
+                        }
+                    }
+
+                    & a {
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 27px;
+                        color: #000;
+                        transition: all 0.3s;
+                        font-family: 'Gilroy', sans-serif;
+
+                        @media screen and (max-width: $phone) {
+                            font-size: 14px;
+                        }
+
+                        &:hover {
+                            color: rgba(255, 71, 77, 1);
+                        }
+                    }
+                }
+            }
+        }
+
+        &__logo {
+            margin-right: 24px;
+        }
+    }
+
+    & .footer-bottom {
+        padding: 22px 0 16px 0;
+
+        @media screen and (max-width: $tabel) {
+            padding: 12px 0 16px 0;
+        }
+
+        &__container {
+            display: flex;
+            align-items: center;
+
+            @media screen and (max-width: $tabel) {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        }
+
+        & .well {
+            height: 14px;
+            margin-right: 8px;
+        }
+
+        &__item {
+            margin-right: 8px;
+        }
+
+        &__link {
+            font-size: 12px;
+            color: rgba(189, 189, 189, 1);
+
+            @media screen and (max-width: $phone) {
+                font-size: 10px;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

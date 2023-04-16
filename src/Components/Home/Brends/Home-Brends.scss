@@ -1,0 +1,132 @@
+@import '../../../var.scss';
+
+.brends {
+    margin-right: 54px;
+    background: #EDEDED;
+    border-bottom-right-radius: 40px;
+    border-top-right-radius: 40px;
+    position: relative;
+    margin-bottom: 40px;
+
+    @media screen and (max-width: $tabel) {
+        margin-right: 0;
+    }
+
+    &__container {
+        padding: 48px;
+        position: relative;
+        // max-width: 100%;
+    }
+
+    &__title {
+        text-align: center;
+        position: relative;
+        padding-bottom: 16px;
+        margin: 0;
+        z-index: 2;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            max-width: 666px;
+            width: 100%;
+            height: 1px;
+            background: rgba(210, 210, 210, 1);
+            transform: translateX(-50%);
+
+            @media screen and (max-width: $tabel) {
+                width: 336px;
+            }
+        }
+    }
+
+    &__wrapper {
+        max-width: 1135px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 43px;
+        margin: 0 auto;
+
+        @media screen and (max-width: $tabel) {
+            max-width: 585px;
+            flex-wrap: wrap;
+        }
+
+        @media screen and (max-width: $phone) {
+            max-width: 345px;
+            justify-content: center;
+        }
+    }
+
+    &__item {
+        width: 211px;
+        position: relative;
+        z-index: 2;
+
+        @media screen and (max-width: $mack) {
+            width: 189px;
+        }
+
+
+
+        &:not(:last-child) {
+            margin-right: 10px;
+
+            @media screen and (max-width: $tabel) {
+                margin-bottom: 60px;
+            }
+
+            @media screen and (max-width: $phone) {
+                margin-right: 0px;
+            }
+        }
+
+        & img {
+            width: 100%;
+        }
+    }
+
+    &__decor-stars {
+        position: absolute;
+        bottom: -185px;
+        right: -50px;
+    }
+
+    &__decor-1 {
+        position: absolute;
+        right: 80px;
+        top: 0;
+        opacity: 0.5;
+
+        @media screen and (max-width: $phone) {
+            right: -20%;
+        }
+    }
+
+    &__decor-2 {
+        width: 505.89px;
+        height: 505.89px;
+        position: absolute;
+        left: 156px;
+        top: -193px;
+        background: radial-gradient(95.51% 95.51% at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(250, 250, 250, 0.2) 100%);
+        border-radius: 94.9017px;
+        transform: rotate(-45deg);
+    }
+
+    &__decor-3 {
+        width: 505.89px;
+        height: 505.89px;
+        position: absolute;
+        top: -179px;
+        right: -50px;        
+        background: radial-gradient(95.51% 95.51% at 50% 50%, #FFFFFF 0%, #FAFAFA 100%);
+        opacity: 0.5;
+        border-radius: 94.9017px;
+        transform: rotate(-45deg);
+    }
+}

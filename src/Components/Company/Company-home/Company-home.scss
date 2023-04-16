@@ -1,0 +1,318 @@
+@import '../../../var.scss';
+
+.company-home {
+    position: relative;
+    margin-top: 144px;
+    margin-bottom: 100px;
+
+    @media screen and (max-width: $tabel) {
+        margin-bottom: 50px;
+    }
+
+    & .box-title {
+        margin-bottom: 93px;
+
+        @media screen and (max-width: $tabel) {
+            margin-bottom: 89px;
+        }
+
+        @media screen and (max-width: $minTabel) {
+            margin-bottom: 54px;
+        }
+
+        @media screen and (max-width: $phone) {
+            margin-bottom: 49px;
+        }
+
+        
+        &__container {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        &__title {
+            max-width: 424px;   
+            position: relative;
+            font-size: 60px;
+            margin: 0 auto 16px auto;
+            line-height: 65px;
+
+            @media screen and (max-width: $bigScreann) {
+                max-width: 398px; 
+                font-size: 56px;
+            }
+
+            @media screen and (max-width: $tabel) {
+                max-width: 339px; 
+                font-size: 48px;
+            }
+
+            @media screen and (max-width: $phone) {
+                max-width: 311px; 
+                font-size: 44px;
+                line-height: 51px;
+            }
+
+            & .stars {
+                display: inline-block;
+
+                &::before {
+                    content: url('../../../imgs/svg/company-title-stars.svg');
+                    position: absolute;
+                    display: block;
+                    top: -35px;
+                    left: -55px;
+                }
+            }
+        }
+
+        & p {
+            font-size: 18px;
+            margin: 0;
+            color: rgba(92, 92, 92, 1);
+
+            @media screen and (max-width: $phone) {
+                line-height: 24px;
+            }
+        }
+    }
+
+    & .company-home-wrapper {
+        margin-right: 560px;
+        border-top-right-radius: 32px;
+        border-bottom-right-radius: 32px;
+        background: rgba(246, 246, 246, 1);
+
+        @media screen and (max-width: $bigScreann) {
+            margin-right: 400px;
+            margin-top: 0;
+        }
+
+        @media screen and (max-width: $tabel) {
+            margin-right: 0;
+            background: #fff;
+        }
+
+        & .wrapper-left {
+            padding: 60px;
+            border-top-right-radius: 32px;
+            border-bottom-right-radius: 32px;
+
+            @media screen and (max-width: $tabel) {
+                max-width: 927px;
+                padding: 60px 180px 60px 124px;
+                background: rgba(246, 246, 246, 1);
+            }
+    
+            @media screen and (max-width: $mack) {
+                padding: 60px 313px 60px 124px;
+            }
+    
+            @media screen and (max-width: $minMack) {
+                padding: 60px 164px 60px 40px;
+            }
+    
+            @media screen and (max-width: $tabel) {
+                max-width: 100%;
+                margin-right: 0;
+                padding: 60px 40px 60px 40px;
+            } 
+
+            &__inner {
+                max-width: 824px;
+                margin: 0 auto;
+    
+                @media screen and (max-width: $mack) {
+                    max-width: none;
+                    margin: 0;
+                }
+    
+                @media screen and (max-width: $tabel) {
+                    max-width: 100%;
+                } 
+    
+                & p {
+                    margin: 0 0 32px 0;
+                    color: rgba(92, 92, 92, 1);
+                }
+            }
+        }
+
+        &__container {
+            padding: 0;
+            position: relative;
+            z-index: 1;
+
+            @media screen and (max-width: $minMack) {
+                margin-right: 0;
+            }
+
+            @media screen and (max-width: $tabel) {
+                max-width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        &__right {
+            order: -1;
+
+            @media screen and (max-width: $tabel) {
+                margin-bottom: 58px;
+            }
+
+            @media screen and (max-width: $phone) {
+                margin-bottom: 40px;
+            }
+        }
+
+        &__block-img {
+            position: absolute;
+            top: -55px;
+            right: -200px;
+
+            @media screen and (max-width: $minMack) {
+                right: -330px;
+            }
+
+            @media screen and (max-width: $tabel) {
+                max-width: 435px;
+                margin: 0 auto;
+                position: relative;
+                top: 0;
+                right: 0;
+                text-align: center;
+            }
+
+            @media screen and (max-width: $phone) {
+                max-width: 280px;
+            }
+
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                right: -32px;
+                top: 18%;
+                width: 125.22px;
+                height: 135px;
+                background: url('../../../imgs/svg/product-fig-stars.svg') no-repeat;
+                background-size: cover;
+
+                @media screen and (max-width: $tabel) {
+                    top: 10%;
+                    right: -65px;
+                    width: 195px;
+                    height: 215px;
+                }
+
+                @media screen and (max-width: $phone) {
+                    width: 111.86px;
+                    height: 123.6px;
+                    right: -26px;
+                    top: 38%;
+                }
+            }
+
+        }
+
+
+        &__img {
+            position: relative;
+            z-index: 1;
+
+            @media screen and (max-width: $mack) {
+                height: 641px;
+            }
+
+            @media screen and (max-width: $minMack) {
+                height: 700px;
+            }
+
+            @media screen and (max-width: $phone) {
+                height: 450px;
+            }
+
+        }
+
+        &__btn {
+            max-width: 210px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 17px 46px;
+            border: none;
+
+            @media screen and (max-width: $tabel) {
+                margin: 0 auto;
+            }
+
+            & svg {
+                display: block;
+                width: 16px;
+                height: 16px;
+                margin-right: 8px;
+            }
+        }
+    }
+
+    & .decor-one {
+        width: 460.84px;
+        height: 460.84px;
+        position: absolute;
+        bottom: -160px;
+        left: -160px;
+        background: radial-gradient(95.51% 95.51% at 50% 50%, #DADADA 0%, #FAFAFA 100%);
+        opacity: 0.15;
+        border-radius: 42.8967px;
+        transform: rotate(-45deg);
+    }
+
+    & .decor-two {
+        width: 678.98px;
+        height: 678.98px;
+        position: absolute;
+        right: -282px;
+        bottom: -216px;
+        background: radial-gradient(95.51% 95.51% at 50% 50%, #DADADA 0%, #FAFAFA 100%);
+        opacity: 0.15;
+        border-radius: 63.2013px;
+        transform: rotate(-45deg);
+
+        @media screen and (max-width: $minMack) {
+            right: -561px;
+            bottom: 0;
+        }
+    }
+
+    & .decor-three {
+        position: absolute;
+        right: 280px;
+        bottom: -200px;
+
+        @media screen and (max-width: $minMack) {
+            right: 0;
+        }
+
+        @media screen and (max-width: $phone) {
+            display: none;
+        }
+    }
+
+    & .decor-four {
+        width: 251.35px;
+        height: 251.35px;
+        position: absolute;
+        top: 80px;
+        left: 2px;
+        background: radial-gradient(95.51% 95.51% at 50% 50%, #DADADA 0%, #FAFAFA 100%);
+        opacity: 0.15;
+        border-radius: 23.3968px;
+        transform: rotate(-45deg);
+
+        @media screen and (max-width: $minMack) {
+            left: -262px;
+        }
+    }
+}

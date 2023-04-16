@@ -1,0 +1,527 @@
+@import '../../../var.scss';
+
+.what-done {
+    position: relative;
+    margin: 100px 0;
+
+    @media screen and (max-width: $tabel) {
+        // margin: 50px 0;
+    }
+
+    &__container {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__title {
+        margin: 0 0 49px 0;
+        text-align: center;
+    }
+
+    &__wrapper {
+
+
+        & h5 {
+            margin: 0;
+            margin-bottom: 30px;
+            font-size: 32px;
+            font-family: "Gilroy", sans-serif;
+        }
+
+        & ul {
+            list-style: none;
+
+            & li {
+                position: relative;
+                margin-left: 15px;
+                color: rgba(92, 92, 92, 1);
+                z-index: 2;
+
+                &:not(:last-child) {
+                    margin-bottom: 24px;
+
+                    @media screen and (max-width: $bigScreann) {
+                        margin-bottom: 17px;
+                    }
+                }
+
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    width: 21.38px;
+                    height: 21.38px;
+                    position: absolute;
+                    top: 0;
+                    left: -15px;
+                    background: radial-gradient(95.51% 95.51% at 50% 50%, #FFFFFF 0%, #FFFFFF 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+                    border-radius: 2px;
+                    transform: rotate(-45deg);
+                    z-index: -1;
+                }
+            }
+        }
+
+        & .what-done-top {
+            display: flex;
+            margin-right: 54px;
+
+            @media screen and (max-width: $minMack) {
+                margin-right: 0;
+            }
+
+            @media screen and (max-width: $tabel) {
+                flex-direction: column;
+                align-items: end;
+                margin-bottom: -375px;
+            }
+
+            @media screen and (max-width: $minTabel) {
+                margin-bottom: 0;
+            }
+            
+            & .texts {
+                width: 50%;
+                position: relative;
+                display: flex;
+                justify-content: flex-end;
+                border-top-right-radius: 32px;
+                border-bottom-right-radius: 32px;
+                margin-right: 24px;
+                padding-right: 15px;
+                padding: 47px 40px;
+                background: rgb(246, 246, 246);
+                overflow: hidden;
+
+                @media screen and (max-width: $tabel) {
+                    width: 100%;
+                    margin-right: 0;
+                    padding: 40px;
+                    margin-bottom: 16px;
+                }
+
+                &__inner {
+                    max-width: 550px;
+                    position: relative;
+                    z-index: 1;
+
+                    @media screen and (max-width: $tabel) {
+                        max-width: 100%;
+                        margin-bottom: 16px;
+                    }
+                }
+
+                &__decor {
+                    width: 499.06px;
+                    height: 499.06px;
+                    position: absolute;
+                    top: -349px;
+                    left: -112px;
+                    background: radial-gradient(95.51% 95.51% at 50% 50%, rgba(210, 210, 210, 0.3) 0%, rgba(250, 250, 250, 0.3) 100%);
+                    border-radius: 32px;
+                    transform: rotate(-45deg);
+                }
+            }
+
+            & .images {
+                width: 714px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                border-radius: 32px;
+                padding: 16px 78px;
+                overflow: hidden;
+                background: rgba(251, 36, 43, 1);
+                overflow: hidden;
+
+                @media screen and (max-width: $bigScreann) {
+                    width: 654px;
+                }
+
+                @media screen and (max-width: $mack) {
+                    width: 620px;
+                    padding: 17px;
+                }
+
+                @media screen and (max-width: $minMack) {
+                    width: 550px;
+                    padding: 17px 0 17px 17px;
+                    justify-content: start;
+                }
+
+                @media screen and (max-width: $tabel) {
+                    width: calc(50% - 33px);
+                    height: 360px;
+                    margin-right: 16px;
+                }
+
+                @media screen and (max-width: $minTabel) {
+                    width: 100%;
+                }
+
+                @media screen and (max-width: $phone) {
+                    margin-right: 0;
+                }
+
+                &__img {
+                    display: block;
+                    z-index: 1;
+
+                    @media screen and (max-width: $tabel) {
+                        width: auto;
+                    }
+                }
+
+                &__decor-one {
+                    width: 319.62px;
+                    height: 319.62px;
+                    background: radial-gradient(95.51% 95.51% at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(250, 250, 250, 0.2) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+                    border-radius: 32.8178px;
+                    transform: rotate(-45deg);
+                    position: absolute;
+                    top: -173px;
+                    left: -140px;
+                }
+
+                &__decor-two {
+                    position: absolute;
+                    bottom: -282px;
+                    right: -218px;
+                    width: 354.31px;
+                    height: 354.31px;
+                    background: radial-gradient(95.51% 95.51% at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(250, 250, 250, 0.2) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+                    border-radius: 35.3757px;
+                    transform: rotate(-45deg);
+                }
+
+                &__decor-three {
+                    width: 297.33px;
+                    height: 225px;
+                    position: absolute;
+                    top: -60px;
+                    right: -205px;
+                    opacity: 0.2;
+
+                    & img {
+                        width: 100%;
+                    }
+                }
+
+                &__decor-four {
+                    width: 268.6px;
+                    height: 203.26px;
+                    position: absolute;
+                    left: -65px;
+                    bottom: -61px;
+                    opacity: 0.2;
+
+                    & img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        & .what-done-bottom {
+            display: flex;
+            justify-content: flex-end;
+            margin-left: 54px;
+            margin-top: 24px;
+
+            @media screen and (max-width: $minMack) {
+                margin-left: 0;
+            }
+
+            @media screen and (max-width: $tabel) {
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-top: 16px;
+            }
+
+            &__item {
+                padding: 40px;
+                border-radius: 32px;
+                position: relative;
+                overflow: hidden;
+
+                @media screen and (max-width: $tabel) {
+                    width: calc(52% - 16px) !important;
+                    height: 360px;
+                }
+
+                @media screen and (max-width: $minTabel) {
+                    width: 100% !important;
+                }
+
+
+                &:not(:last-child) {
+                    margin-right: 24px;
+
+                    @media screen and (max-width: $tabel) {
+                        margin-right: 0;
+                    }
+
+                    @media screen and (max-width: $minTabel) {
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+
+            & .app{
+                width: 492px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-end;
+                padding: 24px 150px 0 150px;
+                background: rgba(251, 36, 43, 1);
+                border-radius: 32px;
+
+                @media screen and (max-width: $bigScreann) {
+                    width: 404px;
+                    padding: 29px 100px 0 100px;
+                }
+
+                @media screen and (max-width: $minMack) {
+                    width: 340px;
+                }
+
+                @media screen and (max-width: $tabel) {
+                    margin-right: 16px;
+                }
+
+                @media screen and (max-width: $phone) {
+                    margin-right: 0px;
+                }
+
+                &__title {
+                    font-size: 16px;
+                    font-weight: 500;
+                    margin-bottom: 16px;
+                    color: rgba(255, 255, 255, 1);
+                    position: relative;
+                    z-index: 1;
+                }
+
+                & img {
+                    display: block;
+                    width: 252px;
+                    position: relative;
+                    left: 13px;
+                    z-index: 1;
+                }
+
+                &__decor-one {
+                    width: 400px;
+                    height: 400px;
+                    position: absolute;
+                    top: -200px;
+                    left: -150px;
+                    background: radial-gradient(95.51% 95.51% at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(250, 250, 250, 0.2) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+                    border-radius: 35.3757px;
+                    transform: rotate(-45deg);
+
+                    @media screen and (max-width: $phone) {
+                        left: -350px;
+                        top: -100px;
+
+                    }
+                }
+
+                &__decor-two {
+                    width: 300px;
+                    height: 300px;
+                    position: absolute;
+                    top: 0px;
+                    right: -250px;
+                    background: radial-gradient(95.51% 95.51% at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(250, 250, 250, 0.2) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+                    border-radius: 35.3757px;
+                    transform: rotate(-45deg);
+                }
+
+                &__decor-three {
+                    width: 200px;
+                    height: 200px;
+                    position: absolute;
+                    right: 0;
+                    bottom: -100px;
+                    opacity: 0.2;
+
+                    & img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            & .texts-one {
+                width: 452px;
+                background: rgba(54, 54, 54, 1);
+
+                @media screen and (max-width: $bigScreann) {
+                    width: 421px;
+                }
+
+                @media screen and (max-width: $mack) {
+                    width: 328px;
+                }
+
+                @media screen and (max-width: $minMack) {
+                    width: 296px;
+                }
+
+                @media screen and (max-width: $tabel) {
+                    margin-bottom: 16px;
+                    order: -1;
+                }
+
+                & h5 {
+                    color: #FFFFFF;
+                }
+
+                & ul {
+
+                    & li {
+                        font-size: 14px;
+                        color: rgba(255, 255, 255, 1);
+                        
+
+                        &::after {
+                            background: radial-gradient(95.51% 95.51% at 50% 50%, rgb(167 167 167 / 18%) 0%, rgba(250, 250, 250, 0) 100%);
+
+                        }
+                    }
+                }
+
+                &__decor-one {
+                    width: 229.4px;
+                    height: 229.4px;
+                    position: absolute;
+                    top: -110px;
+                    left: -165px;
+                    background: radial-gradient(95.51% 95.51% at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(250, 250, 250, 0.2) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+                    opacity: 0.2;
+                    border-radius: 26.856px;
+                    transform: rotate(-45deg);
+                }
+
+                &__decor-two {
+                    width: 235.91px;
+                    height: 235.91px;
+                    position: absolute;
+                    bottom: -195px;
+                    right: -87px;
+                    background: radial-gradient(95.51% 95.51% at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(250, 250, 250, 0.2) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+                    opacity: 0.2;
+                    border-radius: 26.856px;
+                    transform: rotate(-31.85deg);
+                }
+
+                &__decor-three {
+                    width: 207.81px;
+                    height: 157.26px;
+                    position: absolute;
+                    right: -80px;
+                    bottom: -80px;
+                    opacity: 0.2;
+
+                    & img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            & .texts-two {
+                max-width: 725px;
+                flex: 1 1 0%;
+                padding-right: 200px;
+                border-radius: 0;
+                border-bottom-left-radius: 32px;
+                border-top-left-radius: 32px;
+                background: rgb(246, 246, 246);
+
+                @media screen and (max-width: $bigScreann) {
+                    padding-right: 124px;
+                }
+
+                @media screen and (max-width: $mack) {
+                    padding-right: 40px;
+                }
+
+                @media screen and (max-width: $tabel) {
+                    max-width: 100%;
+                }
+
+                @media screen and (max-width: $minTabel) {
+                    height: 100%;
+                }
+
+                &__inner {
+                    max-width: 380px;
+                    position: relative;
+                    z-index: 1;
+                }
+
+                & ul {
+
+                    & li {
+                        font-size: 14px;
+
+                        &::before {
+                            background: radial-gradient(95.51% 95.51% at 50% 50%, #FFFFFF 0%, #FFFFFF 100%);
+                        }
+
+                        &:not(:last-child) {
+                            margin-bottom: 10px;
+
+                            @media screen and (max-width: $bigScreann) {
+                                margin-bottom: 17px;
+                            }
+                        }
+
+                        &::before {
+                            background: radial-gradient(95.51% 95.51% at 50% 50%, #FFFFFF 0%, #FFFFFF 100%);
+                        }
+                    }
+                }
+
+                &__decor-one {
+                    width: 312.56px;
+                    height: 312.56px;
+                    position: absolute;
+                    left: 187px;
+                    top: -180px;
+                    background: radial-gradient(95.51% 95.51% at 50% 50%, rgba(210, 210, 210, 0.3) 0%, rgba(250, 250, 250, 0.3) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+                    border-radius: 20.0414px;
+                    transform: rotate(-45deg);
+                }
+
+                &__decor-two {
+                    position: absolute;
+                    right: 34px;
+                    bottom: 5px;
+                    width: 325px;
+                    height: 245.94px;
+
+                    & img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    & .decor-one {
+        position: absolute;
+        top: 0;
+        left: 123px;
+    }
+
+    & .decor-two {
+        position: absolute;
+        left: 140px;
+        bottom: 0;
+    }
+}

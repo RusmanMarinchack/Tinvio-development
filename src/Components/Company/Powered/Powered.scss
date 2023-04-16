@@ -1,0 +1,284 @@
+@import '../../../var.scss';
+
+.powered {
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+
+    @media screen and (max-width: $tabel) {
+        margin: 50px 0;
+    }
+
+    &__container {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 47px;
+
+        @media screen and (max-width: $bigScreann) {
+            font-size: 44px;
+        }
+
+        @media screen and (max-width: $minTabel) {
+            font-size: 36px;
+        }
+
+        @media screen and (max-width: $phone) {
+            font-size: 32px;
+        }
+
+        & .stars {
+            display: inline-block;
+            position: relative;
+            height: 1px;
+            width: 1px;
+
+            &::before {
+                content: url('../../../imgs/svg/powered-stars.svg');
+                display: block;
+                position: absolute;
+                top: -70px;
+                left: -15px;
+
+                @media screen and (max-width: $minTabel) {
+                    top: -60px;
+                    left: -20px;
+                }
+            } 
+        }
+    }
+
+    &__wrapper {
+    } 
+
+    &__inner {
+        display: grid;
+        grid-gap: 24px;
+        grid-template-columns: 646px 646px;
+        grid-template-rows: 408px 61px 61px 408px;
+        grid-template-areas: 
+        "itemOne itemThree"
+        "itemOne box"
+        "itemTwo box"
+        "itemTwo itemFour"
+        ;
+
+        @media screen and (max-width: $bigScreann) {
+            grid-template-columns: 584px 584px;
+        }
+
+        @media screen and (max-width: $minMack) {
+            grid-template-columns: 487px 487px;
+            grid-template-rows: 395px 51px 51px 395px;
+        }
+
+        @media screen and (max-width: $tabel) {
+            grid-template-columns: 48.5% 48.5%;
+            grid-template-rows: 376px 79px 79px 376px;
+        }
+
+        @media screen and (max-width: $minTabel) {
+            grid-template-columns: 1fr;
+            grid-template-rows: 420px 363px 196px 363px 420px;
+            grid-template-areas: 
+            "itemOne"
+            "itemThree"
+            "box"
+            "itemTwo"
+            "itemFour"
+            ;
+        }
+
+        @media screen and (max-width: $phone) {
+            grid-template-rows: 380px 313px 196px 313px 380px;
+            grid-gap: 16px;
+        }
+    }
+
+    &__item {
+        border-radius: 32px;
+        overflow: hidden;
+
+        &.one {
+            grid-area: itemOne;
+        }
+
+        &.two {
+            grid-area: itemTwo;
+        }
+
+        &.three {
+            grid-area: itemThree;
+        }
+
+        &.four {
+            grid-area: itemFour;
+        }
+
+        & img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        padding: 32px;
+        border-radius: 32px;
+        background: rgba(54, 54, 54, 1);
+        color: #fff;
+        overflow: hidden;
+        grid-area: box;
+
+        @media screen and (max-width: $tabel) {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        @media screen and (max-width: $phone) {
+            padding: 40px 29px;
+        }
+
+        & p {
+            max-width: 300px;
+            position: relative;
+            font-size: 20px;
+            margin: 0;
+            line-height: 24px;
+            font-family: "Gilroy", sans-serif;
+            z-index: 1;
+
+            @media screen and (max-width: $tabel) {
+                max-width: 318px;
+                margin-bottom: 16px;
+            }
+
+            @media screen and (max-width: $phone) {
+                font-size: 18px;
+                line-height: 22px;
+                margin-bottom: 24px;
+            }
+        }
+
+        & .powered__btn {
+            max-width: 210px;
+            display: inline-block;
+            line-height: 20px;
+            text-decoration: none;
+            text-align: center;
+            position: relative;
+            border: none;
+            padding: 17px;
+            z-index: 1;
+
+            @media screen and (max-width: $phone) {
+                padding: 14px;
+            }
+        }
+
+        & .box__decor-one {
+            position: absolute;
+            width: 229.46px;
+            height: 229.46px;
+            position: absolute;
+            left: -100px;
+            bottom: -119px;
+            background: radial-gradient(95.51% 95.51% at 50% 50%, #373737 20%, rgba(250, 250, 250, 0.2) 100%);
+            opacity: 0.2;
+            border-radius: 26.8625px;
+            transform: rotate(-45deg);
+
+            @media screen and (max-width: $phone) {
+                top: -54px;
+                bottom: -137px;
+            }
+        }
+
+        & .box__decor-two {
+            width: 235.91px;
+            height: 235.91px;
+            position: absolute;
+            right: -66px;
+            bottom: -102px;
+            background: radial-gradient(95.51% 95.51% at 50% 50%, #373737 20%, rgba(250, 250, 250, 0.2) 100%);
+            opacity: 0.2;
+            border-radius: 26.856px;
+            transform: rotate(-31.85deg);
+
+            @media screen and (max-width: $phone) {
+                display: none;
+            }
+            
+        }
+
+        & .box__decor-three {
+            width: 285px;
+            position: absolute;
+            bottom: -190px;
+            right: 45%;
+            opacity: 0.1;
+
+            @media screen and (max-width: $phone) {
+                right: -160px;
+                bottom: -70px;
+            }
+
+            & img {
+                width: 100%;
+            }
+        }
+    }
+
+    & .decor-one {
+        width: 724.91px;
+        height: 724.91px;
+        position: absolute;
+        left: -509px;
+        top: -200px;
+        background: radial-gradient(95.51% 95.51% at 50% 50%, #DADADA 0%, #FAFAFA 100%);
+        opacity: 0.15;
+        border-radius: 67.4765px;
+        transform: rotate(-45deg);
+    }
+
+    & .decor-two {
+        width: 724.91px;
+        height: 724.91px;
+        position: absolute;
+        right: -470px;
+        bottom: -243px;
+        background: radial-gradient(95.51% 95.51% at 50% 50%, #DADADA 0%, #FAFAFA 100%);
+        opacity: 0.15;
+        border-radius: 67.4765px;
+        transform: rotate(-45deg);
+    }
+
+    & .decor-three {
+        width: 412.76px;
+        height: 412.76px;
+        position: absolute;
+        right: -108px;
+        top: -50px;
+        background: radial-gradient(95.51% 95.51% at 50% 50%, #DADADA 0%, #FAFAFA 100%);
+        opacity: 0.15;
+        border-radius: 38.4214px;
+        transform: rotate(-45deg);
+    }
+
+    & .decor-four {
+        width: 389.43px;
+        height: 294.7px;
+        position: absolute;
+        left: -96px;
+        top: 393px;
+    }
+}

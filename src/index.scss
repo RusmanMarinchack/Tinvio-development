@@ -1,0 +1,168 @@
+@import './var.scss';
+
+@font-face {
+  font-family: 'Gilroy' ;
+  src: url('./fonts/Gilroy-Regular.ttf') format('ttf');
+  src: url('./fonts/Gilroy-Regular.woff') format('woff');
+  font-style: normal;
+  font-weight: normal
+}
+
+@font-face {
+  font-family: 'Gilroy-SemiBold' ;
+  src: url('./fonts/Gilroy-SemiBold.ttf') format('ttf');
+  src: url('./fonts/Gilroy-SemiBold.woff') format('woff');
+  font-style: normal;
+  font-weight: normal
+}
+
+@font-face {
+  font-family: 'Inter-Regular' ;
+  src: url('./fonts/Inter-Regular.ttf') format('ttf');
+  src: url('./fonts/Inter-Regular.woff') format('woff');
+  font-style: normal;
+  font-weight: normal
+}
+
+@import './normalize';
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+html.look {
+  overflow: hidden;
+}
+
+body {
+  min-width: 320px; 
+  background: #fff;
+  font-size: 18px;
+  line-height: 26px;
+  font-family: 'Inter-Regular', sans-serif;
+
+  @media screen and (max-width: $bigScreann) {
+    font-size: 16px;
+  }
+
+
+}
+
+.App {
+  // position: relative;
+  overflow: hidden;
+}
+
+._container {
+  max-width: 1342px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media screen and (max-width: 1919px) {
+    max-width: 1230px;
+  }
+
+  @media screen and (max-width: 1279px) {
+    max-width: 1030px;
+  }
+}
+
+._title {
+  margin-top: 10px;
+  font-size: 44px;
+  line-height: 49px;
+  font-weight: 600;
+  font-family: 'Gilroy-SemiBold', sans-serif;
+
+  @media screen and (max-width: $tabel) {
+    font-size: 32px;
+    line-height: 39px;
+  }
+}
+
+._section-title {
+  margin-top: 10px;
+  font-size: 44px;
+  line-height: 44px;
+  font-weight: 600;
+  font-family: 'Gilroy-SemiBold', sans-serif;
+
+  @media screen and (max-width: $bigScreann) {
+    font-size: 36px;
+  }
+
+  @media screen and (max-width: $tabel) {
+      font-size: 32px;
+  }
+
+  @media screen and (max-width: $minTabel) {
+      font-size: 28px;
+  }
+
+  @media screen and (max-width: $phone) {
+    line-height: 32px;
+  }
+}
+
+.btn-white {
+  max-width: 220px;
+  width: 100%;
+  font-weight: 600;
+  background: #fff;
+  border-radius: 16px;
+  padding: 12px 19.35px;
+  color: #212121;
+  font-family: 'Gilroy', sans-serif;
+
+  @media screen and (max-width: $bigScreann) {
+    max-width: 180px;
+  }
+  
+  &:hover {
+    background-color: rgb(224, 224, 225);
+}
+}
+
+.btn-red {
+  max-width: 220px;
+  width: 100%;
+  font-weight: 600;
+  background: #FF474D;
+  border-radius: 16px;
+  padding: 12px 19.35px;
+  color: #fff;
+  font-family: 'Gilroy', sans-serif;
+
+  @media screen and (max-width: $bigScreann) {
+    max-width: 180px;
+  }
+
+  &:hover {
+    background: #fb5d62;
+  }
+}
+
+.red {
+  color: #FF474D;
+}
+
+.decors__min {
+  width: 192.93px;
+
+  @media screen and (max-width: 991.98px) {
+    width: 245px;
+  }
+}
+
+.decors__big {
+  width: 328.95px;
+
+  @media screen and (max-width: 991.98px) {
+    width: 408.7px;
+  }
+  
+}

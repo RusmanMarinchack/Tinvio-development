@@ -1,0 +1,465 @@
+@import '../../../var.scss';
+
+.manage {
+    padding: 24px 0;
+    position: relative;
+
+    &__container {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+
+        @media screen and (max-width: $tabel) {
+            padding: 0 15px;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        margin-left: 200px;
+
+        @media screen and (max-width: $bigScreann) {
+            margin-left: 54px;
+        }
+
+        @media screen and (max-width: $minMack) {
+            margin-left: 0px;
+        }
+
+        @media screen and (max-width: $tabel) {
+            flex-direction: column;
+        }
+    }
+
+    & .manage-left {
+        max-width: 714px;
+        width: 100%;
+        margin-right: 24px;
+        background: rgba(246, 246, 246, 1);
+        border-radius: 32px;
+        position: relative;
+        overflow: hidden;
+
+        @media screen and (max-width: $tabel) {
+            max-width: 100%;
+            margin: 0 0 16px 0;
+        }
+
+        &__inner {
+            max-width: 330px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        &__title {
+            margin: 48px 0 5px 0;
+            font-family: "Gilroy", sans-serif;
+        }
+
+        & p {
+            font-size: 16px;
+            margin: 0 0 24px 0;
+            color: rgba(114, 114, 114, 1);
+        }
+
+        &__img-app {
+            display: flex;
+            justify-content: center;
+
+            & img {
+                display: block;
+            }
+        }
+
+        &__decor-1 {
+            width: 281px;
+            position: absolute;
+            bottom: -130px;
+            right: -50px;
+        }
+
+        &__decor-2 {
+            position: absolute;
+            top: -34px;
+            left: -88px;
+            width: 368px;
+            height: 368px;
+            background: radial-gradient(95.51% 95.51% at 50% 50%, rgba(210, 210, 210, 0.3) 0%, rgba(250, 250, 250, 0.3) 100%);
+            border-radius: 24px;
+            transform: rotate(-45deg);
+        }
+
+        &__decor-3 {
+            width: 230px;
+            height: 230px;
+            position: absolute;
+            top: 0;
+            right: -128px;
+            background: radial-gradient(95.51% 95.51% at 50% 50%, rgba(210, 210, 210, 0.3) 0%, rgba(250, 250, 250, 0.3) 100%);
+            border-radius: 24px;
+            transform: rotate(-45deg);
+        }
+    }
+
+    & .manage-right {
+        width: 100%;
+
+        &__inner {
+
+        }
+
+        & .messages {
+            height: 228px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            border-bottom-left-radius: 32px;
+            border-top-left-radius: 32px;
+            padding: 20px;
+            padding-left: 133px;
+            background: #363636;
+            overflow: hidden;
+
+            @media screen and (max-width: $minMack) {
+                padding-left: 20px;
+            }
+
+            @media screen and (max-width: $tabel) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border-radius: 32px;
+            }
+
+            & .messages-form {
+                display: flex;
+                margin-bottom: 22px;
+                pointer-events: none;
+                z-index: 1;
+
+                & .btn {
+                    margin-right: 8px;
+                    padding: 10px;
+                    border-radius: 8px;
+                    border: 1px solid transparent;
+                    background: #F3F4F5;
+                    transition: all 0.3s;
+
+                    @media screen and (max-width: $tabel) {
+                        padding: 8px 10px;
+                    }
+
+                    &:focus {
+                        box-shadow: rgba(0, 0, 0, 0.1) 6px 8px 20px 0px;
+                    }
+
+                    & svg {
+                        width: 14px;
+                        height: 16px;
+
+                        @media screen and (max-width: $phone) {
+                            width: 12px;
+                            height: 14px;
+                        }
+                    }
+                }
+
+                & .clip {
+
+                }
+
+                & .plus {
+
+                }
+
+                &__item {
+                    width: 283px;
+                    display: flex;
+                    align-items: center;
+                    background: #F3F4F5;
+                    border-radius: 8px;
+                    border: 1px solid transparent;
+                    transition: all 0.3s;
+
+                    @media screen and (max-width: $tabel) {
+                        width: 216px;
+                    }
+
+                    &.focus {
+                        border-color: #000;
+                        box-shadow: rgba(0, 0, 0, 0.1) 6px 8px 20px 0px;
+                    }
+
+                    & input {
+                        display: block;
+                        width: 90%;
+                        height: 100%;
+                        padding: 12px 16px;
+                        font-size: 14px;
+                        outline: none;
+                        border: none;
+                        background: transparent;
+
+                        @media screen and (max-width: $tabel) {
+                            padding: 10px 14px;
+                        }
+
+                        &:placeholder-shown {
+                            font-size: 14px;
+                            color: rgba(114, 114, 114, 1);
+                        }
+                    }
+                }
+
+                &__submit {
+                    height: 100%;
+                    border: none;
+                    background: transparent;
+                }
+            }
+
+            &__title {
+                font-size: 28px;
+                font-weight: 500;
+                margin: 0;
+                margin-left: 90px;
+                color: #fff;
+                font-family: "Gilroy", sans-serif;
+
+                @media screen and (max-width: $tabel) {
+                    margin-left: 0;
+                }
+            }
+
+            &__decor-1 {
+                width: 210px;
+                position: absolute;
+                bottom: -70px;
+                left: -10px;
+            }
+
+            &__decor-2 {
+                width: 223px;
+                height: 223px;
+                position: absolute;
+                top: -65px;
+                left: -75px;
+                border-radius: 27px;
+                background: #636363;
+                opacity: 0.2;
+                transform: rotate(-45deg);
+            }
+
+            &__decor-3 {
+                width: 295px;
+                height: 295px;
+                position: absolute;
+                left: 450px;
+                bottom: -115px;
+                border-radius: 27px;
+                background: #636363;
+                opacity: 0.2;
+                transform: rotate(-45deg);
+            }
+        }
+
+        &__bottom {
+            display: flex;
+            margin-top: 24px;
+
+            @media screen and (max-width: $tabel) {
+                margin-top: 16px;
+            }
+
+            @media screen and (max-width: $phone) {
+                flex-direction: column;
+            }
+
+            & h5 {
+                margin: 0;
+                font-size: 24px;
+                font-family: "Gilroy", sans-serif;
+
+                @media screen and (max-width: $tabel) {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        & .create {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 220px;
+            width: 100%;
+            height: 230px;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            background: #363636;
+            border-radius: 32px;
+            margin-right: 24px;
+            overflow: hidden;
+            pointer-events: none;
+
+            @media screen and (max-width: $tabel) {
+                max-width: 50%;
+                margin-right: 16px;
+            }
+
+            @media screen and (max-width: $phone) {
+                max-width: 100%;
+                margin-bottom: 16px;
+                margin-right: 0;
+            }
+
+            &__inner {
+                z-index: 2;
+            }
+
+            &__title {
+                margin-bottom: 15px;
+                color: #fff;
+            }
+
+            &__btn {
+                padding: 16px;
+                border-radius: 12px;
+                border: none;
+
+                &:hover {
+
+                    & span {
+                        background: rgba(255, 71, 77, 1);
+                    }
+                }
+
+                & span {
+                    display: inline-block;
+                    border-radius: 12px;
+                    padding: 10px 21px;
+                    background: rgba(179, 180, 181, 1);
+                    transition: all 0.3s;
+                }
+
+                & svg {
+                    width: 21px;
+                }
+            }
+
+            &__decor-1 {
+                width: 180px;
+                position: absolute;
+                top: -20px;
+                right: -100px;
+            }
+
+            &__decor-2 {
+                width: 230px;
+                height: 230px;
+                position: absolute;
+                top: -43px;
+                left: -190px;
+                border-radius: 27px;
+                background: #636363;
+                opacity: 0.2;
+                transform: rotate(-45deg);
+            }
+
+            &__decor-3 {
+                width: 340px;
+                height: 340px;
+                position: absolute;
+                right: -322px;
+                bottom: -98px;
+                border-radius: 27px;
+                background: #636363;
+                opacity: 0.2;
+                transform: rotate(-45deg);
+            }
+        }
+
+        & .add-links {
+            height: 230px;
+            width: 100%;
+            padding: 44px 60px;
+            background: rgb(246, 246, 246);
+            border-top-left-radius: 32px;
+            border-bottom-left-radius: 32px;
+            position: relative;
+            overflow: hidden;
+            pointer-events: none;
+
+            @media screen and (max-width: $tabel) {
+                max-width: 50%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                border-radius: 32px;
+                padding: 20px;
+            }
+
+            @media screen and (max-width: $phone) {
+                max-width: 100%;
+            }
+
+            &__inner {
+                max-width: 230px;
+                text-align: center;
+                z-index: 1;
+            }
+
+            &__btn {
+                padding: 24px;
+                border-radius: 12px;
+                border: none;
+                background: #fff;
+                box-shadow: rgba(0, 0, 0, 0.1) 6px 8px 20px 0px;
+
+                & svg {
+                    width: 47px;
+                }
+            }   
+
+            &__title {
+                margin-top: 15px;
+            }
+
+            &__decor-1 {
+                width: 163px;
+                position: absolute;
+                top: -60px;
+                left: 173px;
+            }
+
+            &__decor-2 {
+                width: 187px;
+                height: 187px;
+                position: absolute;
+                bottom: -50%;
+                left: 50%;
+                border-radius: 27px;
+                background: radial-gradient(95.51% 95.51% at 50% 50%, rgba(210, 210, 210, 0.3) 0%, rgba(250, 250, 250, 0.3) 100%);
+                opacity: 0.2;
+                transform: rotate(-45deg);
+            }
+
+            &__decor-3 {
+                width: 340px;
+                height: 340px;
+                position: absolute;
+                top: -150px;
+                left: -150px;
+                border-radius: 27px;
+                background: radial-gradient(95.51% 95.51% at 50% 50%, rgba(210, 210, 210, 0.3) 0%, rgba(250, 250, 250, 0.3) 100%);
+                opacity: 0.2;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
